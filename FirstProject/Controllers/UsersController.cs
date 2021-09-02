@@ -6,7 +6,7 @@ using FirstProject.Models;
 
 namespace FirstProject.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UsersController : Controller
     {
 
@@ -27,8 +27,14 @@ namespace FirstProject.Controllers
         {
             return Ok(await Task.Run(() => _context.Users.Find(id)));
         }
+        [HttpGet]
+        [Route("roles/{role}")]
+        public async Task<IActionResult> GetUserByRole(int role)
+        {
+            return Ok(await Task.Run(() => _context.Users.Where(x => x.Role.Id == role).ToArray()));
+        }
         [HttpPost]
-        public async Task<IActionResult> PostUsers([FromBody]User model)
+        public async Task<IActionResult> PostUsers([FromBody] User model)
         {
             if (model.Password != null)
                 model.Password = BCrypt.Net.BCrypt.HashPassword(model.Password);
@@ -41,7 +47,7 @@ namespace FirstProject.Controllers
             return Ok(model);
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateUsers([FromBody]User model)
+        public async Task<IActionResult> UpdateUsers([FromBody] User model)
         {
             _context.Users.Update(model);
 
