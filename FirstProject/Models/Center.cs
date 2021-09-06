@@ -11,7 +11,7 @@ namespace FirstProject.Models
         public Country Country { get; set; }
         public int CityId { get; set; }
         public City City { get; set; }
-        public DateTime Created { get; set; }
+        public DateTime Created { get; set; } = DateTime.Now;
 
         public List<CenterUser> CenterUsers { get; set; }
     }

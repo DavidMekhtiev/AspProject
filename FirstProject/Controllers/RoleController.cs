@@ -6,7 +6,7 @@ using FirstProject.Models;
 
 namespace FirstProject.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class RoleController : Controller
     {
         private readonly UsersContext _context;

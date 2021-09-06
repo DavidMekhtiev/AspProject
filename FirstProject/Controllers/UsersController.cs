@@ -29,7 +29,7 @@ namespace FirstProject.Controllers
         }
         [HttpGet]
         [Route("roles/{role}")]
-        public async Task<IActionResult> GetUserByRole(int role)
+        public async Task<IActionResult> GetUsersByRole(int role)
         {
             return Ok(await Task.Run(() => _context.Users.Where(x => x.Role.Id == role).ToArray()));
         }

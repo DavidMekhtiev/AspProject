@@ -6,7 +6,7 @@ using FirstProject.Models;
 
 namespace FirstProject.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CenterController : Controller
     {
         private readonly UsersContext _context;
@@ -26,22 +26,22 @@ namespace FirstProject.Controllers
             return Ok(await Task.Run(() => _context.Center.Find(id)));
         }
         [HttpPost]
-        public async Task<IActionResult> PostCenter([FromBody] Center center)
+        public async Task<IActionResult> PostCenter([FromBody] Center model)
         {
-            _context.Center.Add(center);
+            _context.Center.Add(model);
 
             await _context.SaveChangesAsync();
 
-            return Ok(center);
+            return Ok(model);
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateCenters([FromBody] Center center)
+        public async Task<IActionResult> UpdateCenters([FromBody] Center model)
         {
-            _context.Center.Update(center);
+            _context.Center.Update(model);
 
             await _context.SaveChangesAsync();
 
-            return Ok(center);
+            return Ok(model);
         }
         [HttpDelete]
         [Route("{id}")]

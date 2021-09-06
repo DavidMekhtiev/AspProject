@@ -14,7 +14,7 @@ namespace FirstProject.Models
         public int RoleId { get; set; }
         public Role Role { get; set; }
         public string IIN { get; set; }
-        public DateTime? Created { get; set; }
+        public DateTime? Created { get; set; } = DateTime.Now;
 
         public List<CenterUser> CenterUsers { get; set; }
     }
