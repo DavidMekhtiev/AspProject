@@ -38,7 +38,6 @@ namespace FirstProject.Controllers
         {
             if (model.Password != null)
                 model.Password = BCrypt.Net.BCrypt.HashPassword(model.Password);
-            model.Created = DateTime.Now;
 
             _context.Users.Add(model);
 

@@ -3,14 +3,16 @@ using System;
 using FirstProject.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FirstProject.Migrations
 {
     [DbContext(typeof(UsersContext))]
-    partial class UsersContextModelSnapshot : ModelSnapshot
+    [Migration("20210919025404_SixthMigration")]
+    partial class SixthMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,7 +51,7 @@ namespace FirstProject.Migrations
                             Id = 1,
                             CityId = 2,
                             CountryId = 1,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 650, DateTimeKind.Local).AddTicks(2039),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 3, 999, DateTimeKind.Local).AddTicks(1376),
                             Name = "Alma-Center №1"
                         },
                         new
@@ -57,7 +59,7 @@ namespace FirstProject.Migrations
                             Id = 2,
                             CityId = 2,
                             CountryId = 1,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 651, DateTimeKind.Local).AddTicks(3793),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 0, DateTimeKind.Local).AddTicks(2013),
                             Name = "Alma-Center №2"
                         },
                         new
@@ -65,7 +67,7 @@ namespace FirstProject.Migrations
                             Id = 3,
                             CityId = 1,
                             CountryId = 1,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 651, DateTimeKind.Local).AddTicks(3875),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 0, DateTimeKind.Local).AddTicks(2067),
                             Name = "Nur-Center №1"
                         },
                         new
@@ -73,7 +75,7 @@ namespace FirstProject.Migrations
                             Id = 4,
                             CityId = 1,
                             CountryId = 1,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 651, DateTimeKind.Local).AddTicks(3878),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 0, DateTimeKind.Local).AddTicks(2070),
                             Name = "Nur-Center №2"
                         },
                         new
@@ -81,7 +83,7 @@ namespace FirstProject.Migrations
                             Id = 5,
                             CityId = 3,
                             CountryId = 2,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 651, DateTimeKind.Local).AddTicks(3880),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 0, DateTimeKind.Local).AddTicks(2072),
                             Name = "Moscow-Center №1"
                         },
                         new
@@ -89,7 +91,7 @@ namespace FirstProject.Migrations
                             Id = 6,
                             CityId = 3,
                             CountryId = 2,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 651, DateTimeKind.Local).AddTicks(3881),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 0, DateTimeKind.Local).AddTicks(2073),
                             Name = "Moscow-Center №2"
                         },
                         new
@@ -97,7 +99,7 @@ namespace FirstProject.Migrations
                             Id = 7,
                             CityId = 4,
                             CountryId = 2,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 651, DateTimeKind.Local).AddTicks(3883),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 0, DateTimeKind.Local).AddTicks(2075),
                             Name = "Petersburg-Center №1"
                         },
                         new
@@ -105,7 +107,7 @@ namespace FirstProject.Migrations
                             Id = 8,
                             CityId = 4,
                             CountryId = 2,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 651, DateTimeKind.Local).AddTicks(3885),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 0, DateTimeKind.Local).AddTicks(2077),
                             Name = "Petersburg-Center №2"
                         });
                 });
@@ -308,43 +310,43 @@ namespace FirstProject.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 651, DateTimeKind.Local).AddTicks(5004),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 0, DateTimeKind.Local).AddTicks(3142),
                             Email = "mekthiev.1995@bk.ru",
                             FirstName = "Давид",
                             IIN = "11111111111",
                             LastName = "Мехтиев",
                             MiddleName = "Низамиевич",
-                            Password = "$2b$10$euoyJQR6LOBYOBUrHpDStOUmjhpSPwpcIck7N8GLsyPizlITmo0UC",
+                            Password = "$2b$10$Pc5eHaDTvQyvSfvUR6Haxeq4FX3uqvFYnlewKFtlW.F2wYDAJRGCS",
                             RoleId = 3
                         },
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 754, DateTimeKind.Local).AddTicks(5437),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 100, DateTimeKind.Local).AddTicks(6031),
                             Email = "shagirovaDayana@gmail.com",
                             FirstName = "Даяна",
                             IIN = "123123154345",
                             LastName = "Шагирова",
                             MiddleName = "Жолдасбековна",
-                            Password = "$2b$10$gNZfmvd/wOb7LO5QvXnhJODuKr6d6Qg7dN.4Gi.zN2QwdV1R/khuq",
+                            Password = "$2b$10$sBSBlkab4TY1Dsw6UvRJC.0kARbPd00Zq/ONahyIV9KlRP6C52SIy",
                             RoleId = 1
                         },
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 852, DateTimeKind.Local).AddTicks(1051),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 196, DateTimeKind.Local).AddTicks(4979),
                             Email = "litvinov.2004@mail.ru",
                             FirstName = "Никита",
                             IIN = "24523452341",
                             LastName = "Литвинов",
                             MiddleName = "Сергеевич",
-                            Password = "$2b$10$w9TMKCSmd8U5vpirP/E3CuZ.ykvSt0oGcADXtrcwp1qTFuZvpItBO",
+                            Password = "$2b$10$mf5yOXGgjZS46dbBSeoYfu9P//muCSfzbg6Wu/ik7o4AYBvmjy75G",
                             RoleId = 2
                         },
                         new
                         {
                             Id = 4,
-                            Created = new DateTime(2021, 9, 19, 12, 49, 12, 950, DateTimeKind.Local).AddTicks(3248),
+                            Created = new DateTime(2021, 9, 19, 8, 54, 4, 289, DateTimeKind.Local).AddTicks(9824),
                             Email = "maksim12313@mail.ru",
                             FirstName = "Максим",
                             IIN = "112624511111",
